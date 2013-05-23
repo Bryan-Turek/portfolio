@@ -151,7 +151,7 @@ a {
   position: fixed;
   display: table-column;
   height: 100%;
-  background: #e3e3e3;
+  background: #34495e;
   width:553px;
   margin-left:-456px;
   -webkit-transition: all 0.3s ease-in-out;
@@ -175,7 +175,7 @@ a {
   right:0;
   width: 97px;
   height: 100%;
-  background: #2d2d2d;
+  background: #2c3e50;
 }
 
 .mainPanel {
@@ -189,6 +189,7 @@ a {
   padding:24px;
 }
 .sidePanel .panelContent > h2 {
+  color: #e3e3e3;
   font-family: Aleo, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
 }
@@ -197,7 +198,7 @@ a {
   margin: 24px;
 }
 .navPanel .panelHeader >  header {
-  background: #111111;
+  background: #222;
   padding: 0 12px;
   border-radius: 4px;
   color:whitesmoke;
