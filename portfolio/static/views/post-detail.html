@@ -1,0 +1,15 @@
+<article class="test">
+  <div class="articleFeature" ng-show="post.featuredImage">
+    <img ng-src="{{post.featuredImage}}" />
+  </div>
+  <div class="articleWrapper">
+    <div class="wrapperInner group section">
+      <span class="articleDate" ng-bind="post.posted"></span>
+      <h1 ng-bind="post.name"></h1>
+      <div ng-bind-html="post.content"></div>
+    </div>
+  </div>
+  <div class="articleComments">
+    <span class="numComments">{{ post.comments + ' comments' }}</span>
+  </div>
+</article>

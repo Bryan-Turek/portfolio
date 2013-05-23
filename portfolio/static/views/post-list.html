@@ -1,0 +1,14 @@
+<div class="group section">
+  <a class="entry group section"
+    ng-repeat="post in posts | orderBy:orderProp"
+    ng-href="#/blog/{{post.id}}-{{post.slug}}">
+    <div class="meta col span_1_of_4">
+      <span class="metaDate">{{post.posted}}</span>
+    </div>
+    <div class="post col span_3_of_4">
+      <div class="postInner">
+        <span class="postTitle">{{post.name}}</span>
+      </div>
+    </div>
+  </a>
+</div>

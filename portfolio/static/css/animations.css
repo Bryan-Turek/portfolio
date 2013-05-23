@@ -1,0 +1,29 @@
+.fade-enter-setup,
+.fade-move-setup {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  position:relative;
+}
+
+.fade-enter-setup {
+  opacity:0;
+}
+.fade-enter-setup.fade-enter-start {
+  opacity:1;
+}
+
+.fade-leave-setup {
+  opacity:1;
+}
+.fade-leave-setup.fade-leave-start {
+  opacity:0;
+}
+
+.fade-move-setup {
+  opacity:0.5;
+}
+.fade-move-setup.fade-move-start {
+  opacity:1;
+}

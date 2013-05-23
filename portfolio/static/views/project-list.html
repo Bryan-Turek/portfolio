@@ -1,0 +1,10 @@
+<div class="group section">
+  <a ng-href="#/project/{{project.slug}}"
+    ng-repeat="project in projects | orderBy:orderProp"
+    class="featured col span_1_of_4">
+    <img ng-repeat="image in project.photos" ng-src="{{image.url}}" />
+    <div class="featuredOverlay">
+      <span class="featuredTitle">{{project.name}}</span>
+    </div>
+  </a>
+</div>

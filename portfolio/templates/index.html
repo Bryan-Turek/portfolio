@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-app="portfolio">
+  <head>
+    <title>Bryan Turek</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" media="screen">
+    <script src="{{ STATIC_URL }}js/jquery.min.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}js/angular.min.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}js/angular-sanitize.min.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}js/angular-services.min.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}js/application.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}js/controllers.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}js/services.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="sidePanel" ng-controller="SideBarCtrl">
+      <div class="navPanel">
+        <div class="panelHeader" ng-href="/">
+          <header home-event>BT</header>
+        </div>
+        <ul class="panelNav">
+          <li ng-click="togglePanel()"><span class="icon info">info</span></li>
+          <li>
+            <a ng-href="#/blog">
+              <span class="icon message">blog</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="panelContent">
+        <h2 ng-bind="projectTitle"></h2>
+      </div>
+    </div>
+    <section class="mainPanel">
+      <div class="panelAdjust"
+        ng-animate="'fade'"
+        ng-hide="hidden == true"
+        ng-view></div>
+    </section>
+  </body>
+</html>
