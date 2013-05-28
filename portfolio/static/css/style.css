@@ -240,9 +240,8 @@ a {
 	------------------	*/
 
 .featured {
-  height: 250px;
-  overflow:hidden;
   position:relative;
+  margin: 0% 0 1% 1.6%;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -254,30 +253,25 @@ a {
   transform: translateZ(0);
   cursor: pointer;
 }
-.featured > .featuredOverlay {
-  background: rgba(5,128,158,0.85);
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  display: none;
-  -webkit-transition: all 0.9s ease-in-out;
-  -moz-transition: all 0.9s ease-in-out;
-  -o-transition: all 0.9s ease-in-out;
-  transition: all 0.9s ease-in-out;
+.featured:nth-child(4n+1) {
+  margin-left: 0;
 }
-.featured:hover > .featuredOverlay {
-  display:block;
+.featured > .featuredImage {
+  height: 250px;
+  overflow: hidden;
 }
-
-.featuredOverlay > .featuredTitle {
+.featured > .featuredTitle {
+  height: 60px;
+}
+.featuredTitle > span {
   font-family: Lato-Regular, Arial, sans-serif;
-  color: white;
+  color: #555;
   display:block;
-  margin: 110px 12px 0;
+  margin: 4px 12px 0 12px;
 }
-
+.featured:hover > .featuredTitle > span {
+  color: #111;
+}
 
 /*	Icons
 	------------------	*/
@@ -438,12 +432,8 @@ px      68    160    252    344    436    528    620    712    */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   
-  .featured {
+  .featured > .featuredImage {
     height: 180px;
-  }
-  
-  .featuredOverlay > .featuredTitle {
-    margin: 75px 12px 0;
   }
 
   body {
@@ -465,31 +455,15 @@ px      68    160    252    */
 @media only screen and (max-width: 767px) {
   
   .span_1_of_4 {
-    width: 50%;
+    width: 49.2%;
   }
   
-  .featured {
+  .featured:nth-child(2n+1) {
+    margin-left: 0;
+  }
+  
+  .featured > .featuredImage {
     height: 180px;
-  }
-  .featured > .featuredOverlay {
-    background: none;
-    background-image: linear-gradient(bottom, rgba(42,42,42,0.95) 0%, rgba(0,0,0,0) 44%);
-    background-image: -o-linear-gradient(bottom, rgba(42,42,42,0.95) 0%, rgba(0,0,0,0) 44%);
-    background-image: -moz-linear-gradient(bottom, rgba(42,42,42,0.95) 0%, rgba(0,0,0,0) 44%);
-    background-image: -webkit-linear-gradient(bottom, rgba(42,42,42,0.95) 0%, rgba(0,0,0,0) 100%);
-    background-image: -ms-linear-gradient(bottom, rgba(42,42,42,0.95) 0%, rgba(0,0,0,0) 44%);
-    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(42,42,42,0.95)), color-stop(1, rgba(0,0,0,0)) );
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    text-align: left;
-  }
-  .featuredOverlay > .featuredTitle {
-    position: absolute;
-    margin: 0 12px;
-    bottom: 12px;
   }
   
   .sidePanel {
@@ -566,17 +540,16 @@ px      68    160    252    344    436    */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   
   .span_1_of_4 {
-    width: 50%;
+    width: 49.2%;
   }
   
-  .mainPanel .featured {
+  .featured:nth-child(2n+1) {
+    margin-left: 0;
+  }
+  .featured > .featuredImage {
     height: 250px;
   }
   
-  .featuredOverlay > .featuredTitle {
-    margin: 110px 12px 0;
-  }
-
   .sidePanel {
     position: fixed;
     #height: 100%;
