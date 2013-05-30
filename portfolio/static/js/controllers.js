@@ -13,7 +13,10 @@ function ProjectDetail($scope, $routeParams, Project) {
 }
 
 function BlogPost($scope, $routeParams, Post) {
-  $scope.post = Post.get({postSlug:$routeParams.postSlug});
+  $scope.post = Post.get({postSlug:$routeParams.postSlug}, function(post) {
+    $scope.prevPost = ($scope.post.previous != false) ? true : false;
+    $scope.nextPost = ($scope.post.next != false) ? true : false;
+  });
 }
 
 function SideBarCtrl($scope) {

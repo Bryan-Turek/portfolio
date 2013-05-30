@@ -12,4 +12,10 @@
   <div class="articleComments">
     <span class="numComments">{{ post.comments + ' comments' }}</span>
   </div>
+  <a ng-show="prevPost" ng-href="#/blog/{{post.previous}}" class="prevArticle">
+    <i class="icon typcn-arrow-left">prev</i>
+  </a>
+  <a ng-show="nextPost" ng-href="#/blog/{{post.next}}" class="nextArticle">
+    <i class="icon typcn-arrow-right">next</i>
+  </a>
 </article>

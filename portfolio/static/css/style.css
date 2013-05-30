@@ -282,6 +282,9 @@ a {
   display: block;
   margin-bottom: -12px;
   color: #cdcdcd;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 .icon {
   color: whitesmoke;
@@ -382,7 +385,6 @@ article h1 {
   font-weight: 300;
   text-align: center;
 }
-
 article .numComments {
   color: #aaa;
   font: 16px/20px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -390,6 +392,30 @@ article .numComments {
   text-align: center;
   font-weight: 800;
   display: block;
+}
+
+article > .prevArticle, article > .nextArticle {
+  position: fixed;
+  width: 45px;
+  text-align: center;
+  padding: 24px 12px;
+  top: 50%;
+  background: #34495e;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+article > .prevArticle:hover, article > .nextArticle:hover {
+  margin: 0;
+}
+article > .prevArticle {
+  margin-left: -15px;
+}
+article > .nextArticle {
+  right: 0;
+  margin-right: -15px;
 }
 
 /*	Project
@@ -409,6 +435,20 @@ article .numComments {
 
   article .articleWrapper{
     width: 100%;
+  }
+  
+  article > .prevArticle:hover {
+    margin-left: -5px;
+  }
+  article > .nextArticle:hover {
+    margin-right: -5px;
+  }
+  article > .prevArticle {
+    margin-left: -40px;
+  }
+  article > .nextArticle {
+    right: 0;
+    margin-right: -40px;
   }
 
 }

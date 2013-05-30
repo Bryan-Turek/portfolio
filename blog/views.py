@@ -16,7 +16,23 @@ def post(request, post_slug):
     post_id = re.split("-", post_slug)
     post = get_object_or_404(Post, id=post_id[0])
     cats = post.posts.all()
+    try:
+      if post.get_previous_by_posted():
+        previousId = post.get_previous_by_posted().id
+        previousSlug = '-'+post.get_previous_by_posted().slug
+    except Post.DoesNotExist:
+        previousId = False
+        previousSlug = ''
+    try:
+      if post.get_next_by_posted():
+        nextId = post.get_next_by_posted().id
+        nextSlug = '-'+post.get_next_by_posted().slug
+    except Post.DoesNotExist:
+        nextId = False
+        nextSlug = ''
     response = {'id': post.id,
+                'previous': previousId,
+                'next': nextId,
                 'slug': post.slug,
                 'name': post.name,
                 'content': post.content,
